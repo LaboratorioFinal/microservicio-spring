@@ -6,7 +6,7 @@
 trigger:
  branches:
    include:
-   - feature-ms-SergioOyarzun-mensaje
+    - feature-ms-SergioOyarzun-mensaje
    exclude:
      - main
 
