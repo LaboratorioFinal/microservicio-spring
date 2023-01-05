@@ -5,10 +5,10 @@
 
 trigger:
  branches:
-   include:
+  include:
     - feature-ms-SergioOyarzun-mensaje
-   exclude:
-     - main
+  exclude:
+    - main
 
 pool:
   vmImage: ubuntu-latest
