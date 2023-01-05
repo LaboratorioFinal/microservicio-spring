@@ -45,9 +45,9 @@ steps:
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'Sonarcloud'
-    organization: 'LaboratorioFinal'
-    projectKey: 'TesterDevopsSO_proyecto-java-fork-2'
-    projectName: 'proyecto-java-fork-2'
+    organization: 'laboratoriofinal'
+    projectKey: 'LaboratorioFinal_microservicio-spring'
+    projectName: 'microservicio-spring'
   displayName: Prepare SonarCloud Analysis
 
 - task: Gradle@3
@@ -62,3 +62,25 @@ steps:
     sonarQubeGradlePluginVersion: '3.3'
     spotBugsAnalysis: false
   displayName: SonarCloud Analysis
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker'
+    command: 'login'
+  displayName: Docker Login
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker'
+    repository: 'zerodaste/pet-clinic'
+    command: 'build'
+    Dockerfile: '**/Dockerfile'
+    tags: 'latest'
+  displayName: Docker Build
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker'
+    repository: 'zerodaste/pet-clinic'
+    command: 'push'
+    tags: 'latest'
