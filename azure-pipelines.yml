@@ -6,9 +6,7 @@
 trigger:
  branches:
   include:
-    - feature-ms-SergioOyarzun-mensaje
-  exclude:
-    - main
+    - feature-*
 
 pool:
   vmImage: ubuntu-latest
