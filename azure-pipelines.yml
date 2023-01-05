@@ -45,7 +45,7 @@ steps:
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'Sonarcloud'
-    organization: 'testerdevopsso'
+    organization: 'LaboratorioFinal'
     projectKey: 'TesterDevopsSO_proyecto-java-fork-2'
     projectName: 'proyecto-java-fork-2'
   displayName: Prepare SonarCloud Analysis
