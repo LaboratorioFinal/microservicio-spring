@@ -15,22 +15,6 @@ steps:
     spotBugsAnalysis: false
   displayName: Build Proyecto
 
-- task: CopyFiles@2
-  displayName: 'Copia .jar'
-  inputs:
-    SourceFolder: '$(Build.SourceDirectory)'
-    Contents: '**/*.jar'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-    CleanTargetFolder: true
-    preserveTimestamp: true
-
-- task: PublishBuildArtifacts@1
-  displayName: 'Publicar artefacto'
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
-
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'Sonarcloud'
