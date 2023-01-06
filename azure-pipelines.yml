@@ -1,5 +1,5 @@
 trigger:
-- feature-*
+- feature-ms-SergioOyarzun-mensaje
 
 pool: 'Default'
 
@@ -38,7 +38,7 @@ steps:
     organization: 'laboratoriofinal'
     projectKey: 'LaboratorioFinal_microservicio-spring'
     projectName: 'microservicio-spring'
-  displayName: Prepare SonarCloud Analysis
+  displayName: Preparar Sonarcloud
 
 - task: Gradle@3
   inputs:
@@ -51,7 +51,7 @@ steps:
     sqGradlePluginVersionChoice: 'specify'
     sonarQubeGradlePluginVersion: '3.3'
     spotBugsAnalysis: false
-  displayName: SonarCloud Analysis
+  displayName: Analisis de Sonarcloud
 
 - task: Docker@2
   inputs:
