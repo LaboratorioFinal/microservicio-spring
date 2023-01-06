@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: LabFinal
+  labels:
+    app: labfinal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: labfinal
+  template:
+    metadata:
+      labels:
+        app: labfinal
+    spec:
+      containers:
+      - name: labfinal
+        image: zerodaste/labfinal:latest
+        ports:
+        - containterPort: 8085
