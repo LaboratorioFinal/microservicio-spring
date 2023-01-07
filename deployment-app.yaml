@@ -16,4 +16,6 @@ spec:
     spec:
       containers:
       - name: labfinal
-        image: zerodaste/labfinal
+        image: zerodaste/labfinal:latest
+        ports:
+        - containerPort:8085
