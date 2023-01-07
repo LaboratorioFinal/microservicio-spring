@@ -45,7 +45,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker'
-    repository: 'zerodaste/labsergio'
+    repository: 'sergioyarzun/labsergio'
     command: 'build'
     Dockerfile: '**/Dockerfile'
     tags: 'latest'
@@ -54,7 +54,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker'
-    repository: 'zerodaste/labsergio'
+    repository: 'sergioyarzun/labsergio'
     command: 'push'
     tags: 'latest'
   displayName: Docker Push
