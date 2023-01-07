@@ -6,4 +6,4 @@ ADD build/libs/testing-web-0.0.1-SNAPSHOT.jar /app/testing-web-0.0.1-SNAPSHOT.ja
 
 WORKDIR /app
 
-CMD java -jar ADD libstesting-web-0.0.1-SNAPSHOT.jar
+CMD java -jar ADD testing-web-0.0.1-SNAPSHOT.jar
