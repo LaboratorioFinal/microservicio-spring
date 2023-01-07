@@ -18,4 +18,4 @@ spec:
       - name: labfinal
         image: zerodaste/labfinal:latest
         ports:
-        - containterPort: 8085
+        - containterPort: 8081
