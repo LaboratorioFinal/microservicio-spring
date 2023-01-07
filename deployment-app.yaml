@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: labfinal
-        image: zerodaste/labfinal
+        image: zerodaste/LABFINAL
