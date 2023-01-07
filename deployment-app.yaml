@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: LabFinal
+  name: labfinal
   labels:
     app: labfinal
 spec:
@@ -18,5 +18,5 @@ spec:
       - name: labfinal
         image: zerodaste/labfinal:latest
         ports:
-        - containterPort: 8085
+        - containerPort: 8085
       type: NodePort
