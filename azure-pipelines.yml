@@ -45,7 +45,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker'
-    repository: 'zerodaste/LABFINAL_S_O'
+    repository: 'zerodaste/LABFINAL'
     command: 'build'
     Dockerfile: '**/Dockerfile'
     tags: 'latest'
@@ -54,7 +54,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker'
-    repository: 'zerodaste/LABFINAL_S_O'
+    repository: 'zerodaste/LABFINAL'
     command: 'push'
     tags: 'latest'
 
@@ -69,6 +69,5 @@ steps:
     command: 'apply'
     arguments: '-f deployment-app.yaml'
     secretType: 'dockerRegistry'
-    containerRegistryType: 'Container Registry'
-    dockerRegistryEndpoint: 'Docker'
+    containerRegistryType: 'Azure Container Registry'
     forceUpdate: false
