@@ -15,6 +15,13 @@ steps:
     spotBugsAnalysis: false
   displayName: Build Proyecto
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'FilePath'
+    TargetPath: '''$(System.DefaultWorkingDirectory)/build/libs/commons.jar'''
+    
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'Sonarcloud'
