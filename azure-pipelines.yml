@@ -67,4 +67,4 @@ steps:
     connectionType: 'None'
     namespace: 'default'
     command: 'apply'
-    arguments: '-f deployment-app.yaml'
+    arguments: '-f microservicio-spring/deployment-app.yaml'
