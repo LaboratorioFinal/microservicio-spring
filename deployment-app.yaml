@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: labsergio
-        image: zerodaste/labsergio:latest
+        image: sergioyarzun/labsergio:latest
         ports:
         - containerPort: 8087
