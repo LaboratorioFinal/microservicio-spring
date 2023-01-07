@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: labfinal
+  name: labsergio
   labels:
-    app: labfinal
+    app: labsergio
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: labfinal
+      app: labsergio
   template:
     metadata:
       labels:
-        app: labfinal
+        app: labsergio
     spec:
       containers:
-      - name: labfinal
-        image: zerodaste/labfinal:latest
+      - name: labsergio
+        image: zerodaste/labsergio:latest
         ports:
         - containerPort: 8087
