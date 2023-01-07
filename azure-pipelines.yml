@@ -57,6 +57,7 @@ steps:
     repository: 'zerodaste/labfinal'
     command: 'push'
     tags: 'latest'
+ displayName: Docker Push
 
 - task: KubectlInstaller@0
   inputs:
