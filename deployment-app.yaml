@@ -18,4 +18,4 @@ spec:
       - name: labsergio
         image: sergioyarzun/labsergio:latest
         ports:
-        - containerPort: 8087
+        - containerPort: 8080
