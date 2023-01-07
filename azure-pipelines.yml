@@ -69,6 +69,3 @@ steps:
     namespace: 'default'
     command: 'apply'
     arguments: '-f deployment-app.yaml'
-    secretType: 'dockerRegistry'
-    containerRegistryType: 'Azure Container Registry'
-    forceUpdate: false
