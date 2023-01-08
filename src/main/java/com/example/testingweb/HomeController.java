@@ -1,10 +1,16 @@
+
 package com.example.testingweb;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@Service
-public class GreetingService {
-	public String greet() {
-		return "Hello, World";
+@Controller
+public class HomeController {
+
+	@RequestMapping("/")
+	public @ResponseBody String greeting() {
+		return "Finaliza el curso DevOps Foundation v3-Sergio Oyarzún";
 	}
+
 }
